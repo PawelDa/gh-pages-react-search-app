@@ -24,7 +24,7 @@ class App extends Component {
 
   search = (query) => {
     const apiKey = '48727053'
-    const url = `http://www.omdbapi.com/?s=${query}&apikey=${apiKey}`
+    const url = `https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`
     fetch(url).then(response => response.json()).then((data) => {
       const movies = data.Search
       this.setState({
