@@ -19,7 +19,7 @@ class App extends Component {
       }
     }
 
-    this.search("lord of the rings");
+    this.search("x-men");
   }
 
   search = (query) => {
