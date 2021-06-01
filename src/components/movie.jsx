@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Movie extends Component {
-  handleClick = (event) => {
+  handleClick(event) {
     const { movies, selectMovie } = this.props
     const movieSrc = event.target.src;
     const movieTitle = movies.find(movie => movie.Poster === event.target.src).Title;
@@ -20,7 +20,7 @@ class Movie extends Component {
         alt=""
         src={src}
         className='movie'
-        onClick={this.handleClick}
+        onClick={this.handleClick.bind(this)}
         movies={movies}/>
     );
   }
