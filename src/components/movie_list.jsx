@@ -4,8 +4,9 @@ import Movie from './movie';
 
 class MovieList extends Component {
   renderList = () => {
-    if (this.props.movies) {
-      return this.props.movies.map(({ Poster }) => <Movie src={Poster} key={Poster} selectMovie={this.props.selectMovie} movies={this.props.movies}/>);
+    const { movies, selectMovie } = this.props
+    if (movies) {
+      return movies.map(({ Poster }) => <Movie src={Poster} key={Poster} selectMovie={selectMovie} movies={movies}/>);
     }
   }
 
