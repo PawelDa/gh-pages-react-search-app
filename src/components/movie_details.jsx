@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 class MovieDetails extends Component {
   render() {
+    if (!this.props.title && !this.props.year) {
+      return null;
+    }
+
     return (
       <div className='card-body'>
         <h3 className='card-title'>{this.props.title}</h3>

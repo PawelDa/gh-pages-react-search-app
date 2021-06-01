@@ -9,6 +9,10 @@ class Movie extends Component {
   }
 
   render() {
+    if (!this.props.src) {
+      return null;
+    }
+
     return (
       <img
         alt=""
