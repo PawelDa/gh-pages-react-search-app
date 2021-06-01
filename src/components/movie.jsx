@@ -2,24 +2,26 @@ import React, { Component } from 'react';
 
 class Movie extends Component {
   handleClick = (event) => {
+    const { movies, selectMovie } = this.props
     const movieSrc = event.target.src;
-    const movieTitle = this.props.movies.find(movie => movie.Poster === event.target.src).Title;
-    const movieYear = this.props.movies.find(movie => movie.Poster === event.target.src).Year;
-    this.props.selectMovie(movieSrc, movieTitle, movieYear);
+    const movieTitle = movies.find(movie => movie.Poster === event.target.src).Title;
+    const movieYear = movies.find(movie => movie.Poster === event.target.src).Year;
+    selectMovie(movieSrc, movieTitle, movieYear);
   }
 
   render() {
-    if (!this.props.src) {
+    const { src, movies } = this.props
+    if (!src) {
       return null;
     }
 
     return (
       <img
         alt=""
-        src={this.props.src}
+        src={src}
         className='movie'
         onClick={this.handleClick}
-        movies={this.props.movies}/>
+        movies={movies}/>
     );
   }
 }
