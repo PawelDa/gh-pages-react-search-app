@@ -9,6 +9,10 @@ class Movie extends Component {
     selectMovie(movieSrc, movieTitle, movieYear);
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.src !== this.props.src;
+  }
+
   render() {
     const { src, movies } = this.props
     if (!src) {
