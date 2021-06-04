@@ -5,6 +5,10 @@ class SearchBar extends Component {
     this.props.searchFunction(event.target.value);
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  }
+
   render() {
     return (
       <input
