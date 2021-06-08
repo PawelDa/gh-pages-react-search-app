@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
-import MovieList from '../containers/movie_list'
-import Movie from '../containers/movie'
+import MovieList from '../containers/movie_list';
+import Movie from '../containers/movie';
+import SearchBar from './search_bar';
 
 class App extends Component {
   render() {
     return (
       <div>
         <div className='left-side'>
+          <SearchBar />
           <div className='selected-movie card'>
             <Movie className='card-img-top'/>
           </div>
@@ -16,7 +18,7 @@ class App extends Component {
           <MovieList />
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -6,7 +6,7 @@ class MovieList extends Component {
       <div className='movie-list'>
         TODO
       </div>
-    )
+    );
   }
 }
 

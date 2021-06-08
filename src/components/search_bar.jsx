@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
+  render() {
+    return (
+      <input
+        type='text'
+        className='form-control form-search'
+      />
+    );
+  }
+}
+
+export default SearchBar;
+
+/*
+import React, { Component } from 'react';
+
+class SearchBar extends Component {
   handleUpdate = (event) => {
     this.props.searchFunction(event.target.value);
   }
@@ -21,3 +37,4 @@ class SearchBar extends Component {
 }
 
 export default SearchBar;
+*/

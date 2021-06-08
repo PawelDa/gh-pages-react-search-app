@@ -4,7 +4,7 @@ class Movie extends Component {
   render() {
     return (
       <img className='movie' alt='' src='https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg' />
-    )
+    );
   }
 }
 
