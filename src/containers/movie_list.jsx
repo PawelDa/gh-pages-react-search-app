@@ -10,7 +10,12 @@ class MovieList extends Component {
   }
 }
 
+export default MovieList;
+
 /*
+--ONLY REACT--
+import React, { Component } from 'react';
+
 import Movie from './movie';
 
 class MovieList extends Component {
@@ -29,6 +34,6 @@ class MovieList extends Component {
     );
   }
 }
-*/
 
 export default MovieList;
+*/

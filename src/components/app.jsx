@@ -1,25 +1,37 @@
 import React, { Component } from 'react';
 
-import MovieList from '../containers/movie_list';
-//import SearchBar from './search_bar';
-//import Movie from './movie';
-//import MovieDetails from './movie_details';
+import MovieList from '../containers/movie_list'
+import Movie from '../containers/movie'
 
 class App extends Component {
   render() {
     return (
       <div>
         <div className='left-side'>
-          <div className='selected-movie card'></div>
+          <div className='selected-movie card'>
+            <Movie className='card-img-top'/>
+          </div>
         </div>
         <div className='right-side'>
-          <MovieList></MovieList>
+          <MovieList />
         </div>
       </div>
     )
   }
 }
-  /*
+
+export default App;
+
+/*
+--ONLY REACT--
+import React, { Component } from 'react';
+
+import MovieList from '../containers/movie_list';
+import SearchBar from './search_bar';
+import Movie from './movie';
+import MovieDetails from './movie_details';
+
+class App extends Component {
   constructor(props) {
     super(props);
 
@@ -72,6 +84,7 @@ class App extends Component {
     </div>
     )
   }
-  */
+}
 
 export default App;
+*/
