@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import MovieList from '../containers/movie_list';
 import Movie from '../containers/movie';
 import SearchBar from './search_bar';
+import MovieDetails from '../containers/movie_details';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <SearchBar />
           <div className='selected-movie card'>
             <Movie className='card-img-top'/>
+            <MovieDetails />
           </div>
         </div>
         <div className='right-side'>
