@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
 
+class MovieList extends Component {
+  render() {
+    return (
+      <div className='movie-list'>
+        TODO
+      </div>
+    )
+  }
+}
+
+/*
 import Movie from './movie';
 
 class MovieList extends Component {
@@ -18,5 +29,6 @@ class MovieList extends Component {
     );
   }
 }
+*/
 
 export default MovieList;
