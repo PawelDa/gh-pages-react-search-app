@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
-import SearchBar from './search_bar';
-import Movie from './movie';
-import MovieList from './movie_list';
-import MovieDetails from './movie_details';
+//import SearchBar from './search_bar';
+//import Movie from './movie';
+//import MovieList from './movie_list';
+//import MovieDetails from './movie_details';
 
 
 class App extends Component {
+/*
   constructor(props) {
     super(props);
 
@@ -59,6 +60,7 @@ class App extends Component {
     </div>
     )
   }
+*/
 }
 
 export default App;
