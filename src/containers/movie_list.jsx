@@ -78,6 +78,10 @@ class MovieList extends Component {
     ]
   }
 
+  componentWillMount() {
+    //TODO: dispach and action to update the redux state tree (movies)
+  }
+
   render() {
     const { movies } = this.props;
     return (
