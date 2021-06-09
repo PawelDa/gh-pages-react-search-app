@@ -8,7 +8,7 @@ import { createStore, combineReducers } from 'redux';
 
 import App from './components/app.jsx';
 
-import moviesReducer from './reducers/movie_reducer';
+import moviesReducer from './reducers/movies_reducer';
 const reducers = combineReducers({
   movies: moviesReducer
 });
