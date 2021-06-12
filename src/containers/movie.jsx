@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { selectMovie } from '../actions/index';
 
 class Movie extends Component {
   render() {
@@ -12,8 +15,14 @@ class Movie extends Component {
   }
 }
 
+function selectedFlatDispatchToProps(dispatch) {
+  return bindActionCreators(
+    { selectMovie: selectMovie },
+    dispatch
+  );
+}
 
-export default Movie;
+export default connect(null, selectedFlatDispatchToProps)(Movie);
 
 /*
 --REACT ONLY--
