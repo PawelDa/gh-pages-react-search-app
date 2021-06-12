@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 import { selectMovie } from '../actions/index';
 
 class Movie extends Component {
-  handleClick() {
-    this.props.selectMovie(this.props.selectedMovie.src)
+  handleClick(event) {
+    console.log(event.target.src)
+    this.props.selectMovie(event.target.src);
   }
 
   render() {
     return (
-      <img className='movie' alt='' src={this.props.src} onClick={this.handleClick}/>
+      <img className='movie' alt='' src={this.props.src} onClick={this.handleClick.bind(this)}/>
     );
   }
 }
