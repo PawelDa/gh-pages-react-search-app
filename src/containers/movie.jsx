@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import { selectMovie } from '../actions/index';
 
 class Movie extends Component {
+  handleClick() {
+    this.props.selectMovie(this.props.selectedMovie.src)
+  }
+
   render() {
     return (
       <img className='movie' alt='' src={this.props.src} onClick={this.handleClick}/>
     );
-  }
-  
-  handleClick() {
-    // TODO
   }
 }
 
@@ -22,7 +22,13 @@ function selectedFlatDispatchToProps(dispatch) {
   );
 }
 
-export default connect(null, selectedFlatDispatchToProps)(Movie);
+function mapReduxStateToProps(reduxState) {
+  return {
+    selectedMovie: reduxState.selectedMovie
+  }
+}
+
+export default connect(mapReduxStateToProps, selectedFlatDispatchToProps)(Movie);
 
 /*
 --REACT ONLY--

@@ -8,13 +8,12 @@ const selectedMovieReducer = (state, action) => {
     // } else {
     // return state;
     // }
-  
-    //switch (action.type) {
-    //  case 'SET_MOVIES':
-    //    return action.payload;
-    //  default:
-    //    return state
-    //}
+    switch (action.type) {
+      case 'SELECT_MOVIE':
+        return action.payload;
+      default:
+        return state
+    }
   }
   
   export default selectedMovieReducer;
