@@ -14,7 +14,7 @@ class MovieList extends Component {
     const { movies } = this.props;
     return (
       <div className='movie-list'>
-        {movies.map((movie) => <Movie src={movie.Poster} key={movie.Poster} movies={movies}/>)};
+        {movies.map((movie) => <Movie src={movie.Poster} key={movie.Poster} />)};
       </div>
     );
   }

@@ -3,11 +3,11 @@ const moviesReducer = (state, action) => {
     return []
   }
 
-  //if (action.type === 'SET_MOVIES') {
+  // if (action.type === 'SET_MOVIES') {
   //  return action.payload;
-  //} else {
+  // } else {
   // return state;
-  //}
+  // }
 
   switch (action.type) {
     case 'SET_MOVIES':
