@@ -9,8 +9,11 @@ import { createStore, combineReducers } from 'redux';
 import App from './components/app.jsx';
 
 import moviesReducer from './reducers/movies_reducer';
+import selectedMovieReducer from './reducers/selected_movie_reducer';
+
 const reducers = combineReducers({
-  movies: moviesReducer
+  movies: moviesReducer,
+  selectedMovie: selectedMovieReducer
 });
 
 const root = document.getElementById('root');
