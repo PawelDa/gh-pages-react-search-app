@@ -6,11 +6,12 @@ class Movie extends Component {
       <img className='movie' alt='' src={this.props.src} onClick={this.handleClick}/>
     );
   }
-}
-
+  
   handleClick() {
     // TODO
   }
+}
+
 
 export default Movie;
 
