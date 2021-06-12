@@ -3,10 +3,14 @@ import React, { Component } from 'react';
 class Movie extends Component {
   render() {
     return (
-      <img className='movie' alt='' src={this.props.src} />
+      <img className='movie' alt='' src={this.props.src} onClick={this.handleClick}/>
     );
   }
 }
+
+  handleClick() {
+    // TODO
+  }
 
 export default Movie;
 
