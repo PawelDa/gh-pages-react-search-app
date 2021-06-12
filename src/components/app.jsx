@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import MovieList from '../containers/movie_list';
 import Movie from '../containers/movie';
 import SearchBar from './search_bar';
-import MovieDetails from '../containers/movie_details';
+// import MovieDetails from '../containers/movie_details';
 
 class App extends Component {
   static defaultProps = {
@@ -21,7 +21,7 @@ class App extends Component {
           <SearchBar />
           <div className='selected-movie card'>
             <Movie className='card-img-top' src={this.props.selectedMovie.src}/>
-            <MovieDetails title={this.props.selectedMovie.title} year={this.props.selectedMovie.year}/>
+            {/*  <MovieDetails title={this.props.selectedMovie.title} year={this.props.selectedMovie.year}/>  */}
           </div>
         </div>
         <div className='right-side'>
