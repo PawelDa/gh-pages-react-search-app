@@ -13,6 +13,6 @@ export function selectMovie(value) {
   console.log(value)
   return {
     type: 'SELECT_MOVIE',
-    payload: { selectedMovie: { src: value } }
+    payload: value
   }
 }

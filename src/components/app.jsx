@@ -5,20 +5,12 @@ import SearchBar from './search_bar';
 import MovieDetails from '../containers/movie_details';
 
 class App extends Component {
-  static defaultProps = {
-    selectedMovie: {
-      src: 'https://m.media-amazon.com/images/M/MV5BNzU3NDg4NTAyNV5BMl5BanBnXkFtZTcwOTg2ODg1Mg@@._V1_SX300.jpg',
-      title: 'Harry Potter and the Half-Blood Prince',
-      year: '2009'
-    }
-  }
-
   render() {
     return (
       <div>
         <div className='left-side'>
           <SearchBar />
-          <MovieDetails title={this.props.selectedMovie.title} year={this.props.selectedMovie.year} src={this.props.selectedMovie.src}/>
+          <MovieDetails />
         </div>
         <div className='right-side'>
           <MovieList />

@@ -5,8 +5,11 @@ import { selectMovie } from '../actions/index';
 
 class Movie extends Component {
   handleClick(event) {
-    console.log(event.target.src)
-    this.props.selectMovie(event.target.src);
+    const movieSrc = event.target.src;
+    const movieTitle = this.props.movies.find(movie => movie.Poster === event.target.src).Title;
+    const movieYear = this.props.movies.find(movie => movie.Poster === event.target.src).Year;
+    const selectedMovie = { src: movieSrc, title: movieTitle, year: movieYear };
+    selectMovie(selectedMovie)
   }
 
   render() {

@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 
 class MovieDetails extends Component {
+  static defaultProps = {
+    selectedMovie: {
+      src: 'https://m.media-amazon.com/images/M/MV5BNzU3NDg4NTAyNV5BMl5BanBnXkFtZTcwOTg2ODg1Mg@@._V1_SX300.jpg',
+      title: 'Harry Potter and the Half-Blood Prince',
+      year: '2009'
+    }
+  }
+
   render() {
     return (
       <div className='selected-movie card'>
-        <img className='card-img-top' alt='' src={this.props.src}/>
+        <img className='card-img-top' alt='' src={this.props}/>
         <div className='card-body movie-details'>
-          <h3 className='card-title'>{this.props.title}</h3>
-          <h4 className='card-text'>{this.props.year}</h4>
+          <h3 className='card-title'>{this.element}</h3>
+          <h4 className='card-text'>{this.defaultProps}</h4>
         </div>
       </div>
     );
