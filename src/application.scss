@@ -39,21 +39,21 @@
     height: calc(100vh - 232px);
     background-color: rgb(240, 240, 240);
 
-    .movie {
-      max-width: 75%;
-      max-height: 75%;
+    .card-img-top {
+      width: auto;
+      height: 60%;
       margin: auto;
     }
 
     .movie-details {
       margin: auto;
 
-      .h3 {
-        font-size: 10vw
+      .card-title {
+        font-size: 1.5vw
       }
 
-      .h4 {
-        font-size: 2vw;
+      .card-text {
+        font-size: 1.5vw;
       }
     }
   }

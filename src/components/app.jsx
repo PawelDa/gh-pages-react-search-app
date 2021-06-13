@@ -18,9 +18,7 @@ class App extends Component {
       <div>
         <div className='left-side'>
           <SearchBar />
-          <div className='selected-movie card'>
-            <MovieDetails title={this.props.selectedMovie.title} year={this.props.selectedMovie.year} src={this.props.selectedMovie.src}/>  
-          </div>
+          <MovieDetails title={this.props.selectedMovie.title} year={this.props.selectedMovie.year} src={this.props.selectedMovie.src}/>
         </div>
         <div className='right-side'>
           <MovieList />
