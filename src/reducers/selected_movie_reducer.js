@@ -1,6 +1,6 @@
 const selectedMovieReducer = (state, action) => {
     if (state === undefined) {
-      return null;
+      return null; // state when app renders first time
     }
   
     // if (action.type === 'SET_MOVIES') {

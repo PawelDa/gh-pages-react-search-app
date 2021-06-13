@@ -9,10 +9,9 @@ export function setMovies() {
   }
 }
 
-export function selectMovie(value) {
-  console.log(value)
+export function selectMovie(movie) {
   return {
     type: 'SELECT_MOVIE',
-    payload: value
+    payload: movie
   }
 }

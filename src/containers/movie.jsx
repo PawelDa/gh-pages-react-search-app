@@ -8,8 +8,7 @@ class Movie extends Component {
     const movieSrc = event.target.src;
     const movieTitle = this.props.movies.find(movie => movie.Poster === event.target.src).Title;
     const movieYear = this.props.movies.find(movie => movie.Poster === event.target.src).Year;
-    const selectedMovie = { src: movieSrc, title: movieTitle, year: movieYear };
-    selectMovie(selectedMovie)
+    this.props.selectMovie({ src: movieSrc, title: movieTitle, year: movieYear })
   }
 
   render() {
