@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import MovieList from '../containers/movie_list';
-import SearchBar from './search_bar';
+import SearchBar from '../containers/search_bar';
 import MovieDetails from '../containers/movie_details';
 
 class App extends Component {
