@@ -5,7 +5,7 @@ import './application.scss';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import reduxPromise from 'redux-promise';
+import promiseMiddleware from 'redux-promise';
 
 import App from './components/app.jsx';
 import moviesReducer from './reducers/movies_reducer';
@@ -16,7 +16,7 @@ const reducers = combineReducers({
   selectedMovie: selectedMovieReducer
 });
 
-const middlewares = applyMiddleware(reduxPromise);
+const middlewares = applyMiddleware(promiseMiddleware);
 
 const root = document.getElementById('root');
 ReactDOM.render(
