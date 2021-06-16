@@ -7,7 +7,7 @@ import Movie from './movie';
 
 class MovieList extends Component {
   componentWillMount() {
-    this.props.setMovies();
+    this.props.setMovies('x-men');
   }
 
   render() {
