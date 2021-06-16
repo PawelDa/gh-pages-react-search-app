@@ -1,5 +1,3 @@
-// import movies from '../movies';
-
 export function setMovies() {
   // TODO API calla
   const searchedMovie = 'harry potter';
