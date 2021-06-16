@@ -28,7 +28,7 @@ function selectedFlatDispatchToProps(dispatch) {
 function mapReduxStateToProps(reduxState) {
   return {
     selectedMovie: reduxState.selectedMovie
-  }
+  };
 }
 
 export default connect(mapReduxStateToProps, selectedFlatDispatchToProps)(Movie);

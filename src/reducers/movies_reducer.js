@@ -1,8 +1,7 @@
 const moviesReducer = (state, action) => {
   if (state === undefined) {
-    return []
+    return [];
   }
-
   // if (action.type === 'SET_MOVIES') {
   //  return action.payload;
   // } else {
@@ -13,7 +12,7 @@ const moviesReducer = (state, action) => {
     case 'SET_MOVIES':
       return action.payload;
     default:
-      return state
+      return state;
   }
 }
 

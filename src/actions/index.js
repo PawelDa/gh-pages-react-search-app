@@ -15,7 +15,7 @@ export function selectMovie(movie) {
   return {
     type: 'SELECT_MOVIE',
     payload: movie
-  }
+  };
 }
 /*
 export function setMovies() {

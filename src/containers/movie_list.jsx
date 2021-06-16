@@ -30,7 +30,7 @@ function mapDispatchToProps(dispatch) {
 function mapReduxStateToProps(reduxState) {
   return {
     movies: reduxState.movies
-  }
+  };
 }
 
 export default connect(mapReduxStateToProps, mapDispatchToProps)(MovieList);
