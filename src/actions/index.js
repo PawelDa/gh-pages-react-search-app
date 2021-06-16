@@ -1,12 +1,18 @@
-import movies from '../movies';
+// import movies from '../movies';
 
 export function setMovies() {
-  // TODO API call
-
-  return {
-    type: 'SET_MOVIES',
-    payload: movies
-  }
+  // TODO API calla
+  const searchedMovie = 'harry potter';
+  const apiKey = '48727053';
+  const url = `https://www.omdbapi.com/?s=${searchedMovie}&apikey=${apiKey}`;
+  return fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+      return {
+        type: 'SET_MOVIES',
+        payload: data.Search
+      };
+    });
 }
 
 export function selectMovie(movie) {
