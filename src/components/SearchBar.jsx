@@ -4,7 +4,7 @@ import '../assets/stylesheets/components/SearchBar.scss';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { setMovies } from '../redux/actions/index';
+import { setMovies } from '../redux/actions/movies';
 
 class SearchBar extends Component {
   handleUpdate = (event) => {
@@ -12,6 +12,7 @@ class SearchBar extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <input
         type='text'

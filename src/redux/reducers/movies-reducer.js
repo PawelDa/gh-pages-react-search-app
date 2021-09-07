@@ -1,8 +1,6 @@
-const moviesReducer = (state, action) => {
-  if (state === undefined) {
-    return [];
-  }
+const initialState = [];
 
+const moviesReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_MOVIES':
       return action.payload;
