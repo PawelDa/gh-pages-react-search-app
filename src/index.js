@@ -1,27 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
 import './assets/stylesheets/application.scss';
 
-import { Provider } from 'react-redux';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import promiseMiddleware from 'redux-promise';
-
 import App from './App';
 
-import moviesReducer from './reducers/movies_reducer';
-import selectedMovieReducer from './reducers/selected_movie_reducer';
+import { store } from './redux/store';
 
-const reducers = combineReducers({
-  movies: moviesReducer,
-  selectedMovie: selectedMovieReducer
-});
-
-const middlewares = applyMiddleware(promiseMiddleware);
-
-const root = document.getElementById('root');
 ReactDOM.render(
-  <Provider store={createStore(reducers, {}, middlewares)}>
+  <Provider store={store}>
     <App />
   </Provider>,
-  root);
+  document.getElementById('root')
+);
