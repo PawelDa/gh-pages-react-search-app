@@ -10,17 +10,6 @@
   display: flex;
   flex-direction: column;
 
-  .form-search {
-    background-color: rgb(220, 220, 220);
-    padding: 60px 60px 60px 120px;
-    border: none;
-    font-size: 2.6em;
-    box-shadow: none;
-    &:focus {
-      box-shadow: none;
-    }
-  }
-
   &:before {
     content: '\F002';
     position: absolute;

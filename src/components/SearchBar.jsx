@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import '../assets/stylesheets/components/SearchBar.scss';
+
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setMovies } from '../actions/index';
@@ -26,13 +29,13 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-function mapReduxStateToProps(reduxState) {
+function mapStateToProps(reduxState) {
   return {
     movies: reduxState.movies
   };
 }
 
-export default connect(mapReduxStateToProps, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
 
 /*
 import React, { Component } from 'react';
