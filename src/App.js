@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import MovieList from './containers/movie_list';
-import SearchBar from './containers/search_bar';
-import MovieDetails from './containers/movie_details';
+import MovieList from './components/movie_list';
+import SearchBar from './components/search_bar';
+import MovieDetails from './components/movie_details';
 
 class App extends Component {
   render() {
