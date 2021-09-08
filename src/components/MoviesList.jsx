@@ -9,10 +9,10 @@ import MovieIcon from './MovieIcon';
 import '../assets/stylesheets/components/MoviesList.scss';
 
 const MoviesList = (state) => {
-  console.log(state.movies.movies)
+  console.log(state.movies)
   return(
   <div className='movies-list'>
-    {state.movies.movies.map((movie) => (
+    {state.movies.map((movie) => (
       <MovieIcon key={movie.id} movie={movie} />
     ))}
   </div>
