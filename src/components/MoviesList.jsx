@@ -4,11 +4,17 @@ import { createStructuredSelector } from 'reselect';
 
 import { selectMovies } from '../redux/selectors/movies';
 
-const MoviesList = ({ movies }) => {
-  console.log(movies)
+import MovieIcon from './MovieIcon';
+
+import '../assets/stylesheets/components/MoviesList.scss';
+
+const MoviesList = (state) => {
+  console.log(state.movies.movies)
   return(
   <div className='movies-list'>
-    Hello
+    {state.movies.movies.map((movie) => (
+      <MovieIcon key={movie.id} movie={movie} />
+    ))}
   </div>
 )};
 
@@ -17,5 +23,3 @@ const mapStateToProps = createStructuredSelector({
 });
 
 export default connect(mapStateToProps)(MoviesList);
-
-//{movies.map((movie) => <MovieIcon src={movie.Poster} key={movie.Poster} movies={movies}/>)};
