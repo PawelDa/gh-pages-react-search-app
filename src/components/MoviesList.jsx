@@ -12,9 +12,12 @@ const MoviesList = (state) => {
   console.log(state.movies)
   return(
   <div className='movies-list'>
-    {state.movies.map((movie) => (
-      <MovieIcon key={movie.id} movie={movie} />
-    ))}
+    {state.movies.length ?
+      state.movies.map(movie => 
+        <MovieIcon key={movie.id} movie={movie} />
+      ) : (
+        null
+      )}
   </div>
 )};
 
