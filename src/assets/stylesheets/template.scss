@@ -1,0 +1,67 @@
+#root > div {
+  display: flex;
+  height: 100vh;
+}
+
+.left-side {
+  flex: 0 0 60%;
+  background-color: rgb(250, 250, 250);;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+
+  &:before {
+    content: '\F002';
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    font-family: FontAwesome;
+    font-size: 2.6em;
+    opacity: 0.4;
+  }
+
+  .selected-movie {
+    padding-top: calc(100vh * 0.1);
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    height: calc(100vh - 232px);
+    background-color: rgb(240, 240, 240);
+
+    .card-img-top {
+      width: auto;
+      height: 60%;
+      margin: auto;
+    }
+
+    .movie-details {
+      margin: auto;
+
+      .card-title {
+        font-size: 1.5vw
+      }
+
+      .card-text {
+        font-size: 1.5vw;
+      }
+    }
+  }
+}
+
+.right-side {
+  flex: 0 0 40%;
+  background-color: rgb(200, 200, 200);
+  overflow: scroll;
+
+  .movie-list {
+    column-count: 2;
+    column-gap: 5px;
+    padding: 5px;
+  }
+
+  .movie {
+    width: 100%;
+    margin: 5px;
+    cursor: pointer;
+  }
+}
