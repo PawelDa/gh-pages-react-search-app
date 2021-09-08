@@ -4,5 +4,5 @@ const selectState = state => state;
 
 export const selectMovies = createSelector(
   [selectState],
-  (state) => state.movies
+  state => state.movies
 );

@@ -12,12 +12,13 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className='form-search'>
-        <input
-          type='text'
-          className='form-control form-search'
-          onChange={this.handleUpdate}
-        />
+      <div className='search-container'>
+        <div className='form-search'>
+          <input
+            type='text'
+            onChange={this.handleUpdate}
+          />
+        </div>
       </div>
     );
   }
