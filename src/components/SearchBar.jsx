@@ -5,6 +5,7 @@ import '../assets/stylesheets/components/SearchBar.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setMovies } from '../redux/actions/movies';
+import { selectMovies } from '../redux/selectors/movies';
 
 class SearchBar extends Component {
   handleUpdate = (event) => {
@@ -30,36 +31,8 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-function mapStateToProps(reduxState) {
-  return {
-    movies: reduxState.movies
-  };
-}
+const mapStateToProps = (state) => ({
+  movies: selectMovies(state)
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
-
-/*
-import React, { Component } from 'react';
-
-class SearchBar extends Component {
-  handleUpdate = (event) => {
-    this.props.searchFunction(event.target.value);
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return false;
-  }
-
-  render() {
-    return (
-      <input
-        type='text'
-        className='form-control form-search'
-        onChange={this.handleUpdate}
-      />
-    );
-  }
-}
-
-export default SearchBar;
-*/
