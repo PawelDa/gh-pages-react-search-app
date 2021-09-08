@@ -27,13 +27,13 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-function mapReduxStateToProps(reduxState) {
+function mapStateToProps(reduxState) {
   return {
     movies: reduxState.movies
   };
 }
 
-export default connect(mapReduxStateToProps, mapDispatchToProps)(MovieList);
+export default connect(mapStateToProps, mapDispatchToProps)(MovieList);
 
 /*
 --ONLY REACT--
