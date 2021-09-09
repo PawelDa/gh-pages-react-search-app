@@ -14,7 +14,10 @@ const MovieIcon = ({ movie, selectMovie }) => {
         <h5 className='card-title'>{movie.title}</h5>
         <button
           className="btn btn-primary"
-          onClick={() => {selectMovie(movie)}}
+          onClick={() => {
+            selectMovie(movie);
+            document.documentElement.scrollTop = 0;
+          }}
         >
           Movie Details
         </button>
