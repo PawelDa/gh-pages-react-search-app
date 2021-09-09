@@ -8,9 +8,7 @@ import MovieIcon from './MovieIcon';
 
 import '../assets/stylesheets/components/MoviesList.scss';
 
-const MoviesList = (state) => {
-  console.log(state.movies)
-  return(
+const MoviesList = (state) => (
   <div className='movies-list'>
     {state.movies.length ?
       state.movies.map(movie => 
@@ -19,7 +17,7 @@ const MoviesList = (state) => {
         null
       )}
   </div>
-)};
+);
 
 const mapStateToProps = createStructuredSelector({
   movies: selectMovies

@@ -1,19 +1,30 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { selectMovie } from '../redux/actions/movies';
 
 import '../assets/stylesheets/components/MovieIcon.scss';
 
-const MovieIcon = ({ movie }) => {
+const MovieIcon = ({ movie, selectMovie }) => {
   const url = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
-  console.log(url)
   return (
     <div className='card'>
-      <img src={url} className='card-img-top' />
+      <img src={url} alt='' className='card-img-top' />
       <div className='card-body just'>
         <h5 className='card-title'>{movie.title}</h5>
-        <a href="#" className="btn btn-primary">Movie Details</a>
+        <button
+          className="btn btn-primary"
+          onClick={() => {selectMovie(movie)}}
+        >
+          Movie Details
+        </button>
       </div>
     </div>
   )
 }
 
-export default MovieIcon;
+const mapDispatchToProps = dispatch => ({
+  selectMovie: movie => dispatch(selectMovie(movie))
+});
+
+export default connect(null, mapDispatchToProps)(MovieIcon);
